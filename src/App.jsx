@@ -2,7 +2,8 @@ import Section from './components/Section/Section';
 import Container from './components/Container/Container';
 // import ContactForm from './components/ContactForm/ContactForm';
 // import SearchBox from './components/SearchBox/SearchBox';
-// import ContactList from './components/ContactList/ContactList';
+import ContactList from './components/ContactList/ContactList';
+import contactData from './contacts.json';
 // import { useState, useEffect } from 'react';
 import appCss from './App.module.css';
 
@@ -17,10 +18,10 @@ const App = () => {
       </Section>
       <Section className="search">
         <SearchBox />
-      </Section>
-      <Section className="list">
-        <ContactList />
       </Section> */}
+      <Section className="list">
+        <ContactList contactData={contactData} />
+      </Section>
     </Container>
   );
 };

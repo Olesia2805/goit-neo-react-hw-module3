@@ -4,6 +4,7 @@ body {
   font-family: var(--content-font-family);
   line-height: 1.5;
   background-color: var(--background-primary-color);
+  color: var(--content-text-color);
 }
 
 h1,
@@ -20,6 +21,7 @@ ul,
 ol {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 img {
