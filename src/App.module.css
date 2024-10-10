@@ -1,0 +1,34 @@
+.header {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #4674f3 0%,
+    #9857dd 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 300% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 15s linear infinite;
+  display: inline-block;
+  font-size: 32px;
+  font-family: var(--title-font-family);
+}
+
+@keyframes textclip {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
