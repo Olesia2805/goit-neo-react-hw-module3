@@ -1,6 +1,6 @@
 import Section from './components/Section/Section';
 import Container from './components/Container/Container';
-// import ContactForm from './components/ContactForm/ContactForm';
+import ContactForm from './components/ContactForm/ContactForm';
 import SearchBox from './components/SearchBox/SearchBox';
 import ContactList from './components/ContactList/ContactList';
 import contactDB from './contactsDB.json';
@@ -21,9 +21,9 @@ const App = () => {
       <Section>
         <h1 className={appCss.header}>Phonebook</h1>
       </Section>
-      {/* <Section className="form">
+      <Section className="form">
         <ContactForm />
-      </Section> */}
+      </Section>
       <Section className="search">
         <SearchBox />
       </Section>

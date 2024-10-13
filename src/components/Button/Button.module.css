@@ -13,10 +13,10 @@
   outline: none;
   display: flex;
   align-items: flex-end;
+  gap: 5px;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover {
   background: linear-gradient(
     100deg,
     var(--btn-gradient-third),
