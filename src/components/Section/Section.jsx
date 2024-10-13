@@ -3,8 +3,8 @@ import clsx from 'clsx';
 
 const Section = ({ children, className }) => {
   const sectionClassName = clsx(className, {
-    // [style.buttons]: className === 'buttons',
-    [style.section]: true, // Always apply the base section class
+    // [style.contactsList]: className === 'contactsList',
+    [style.section]: true,
   });
   return <section className={sectionClassName}>{children}</section>;
 };

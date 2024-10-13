@@ -27,3 +27,9 @@
   flex-wrap: wrap;
   gap: 25px 15px;
 }
+
+@media screen and (max-width: 565px) {
+  .listCards {
+    justify-content: center;
+  }
+}

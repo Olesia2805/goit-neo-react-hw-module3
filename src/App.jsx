@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <Container>
-      <Section className="header">
+      <Section>
         <h1 className={appCss.header}>Phonebook</h1>
       </Section>
       {/* <Section className="form">
@@ -27,7 +27,7 @@ const App = () => {
       <Section className="search">
         <SearchBox />
       </Section> */}
-      <Section className="list">
+      <Section>
         <ContactList contactData={contacts} onDelete={deleteContact} />
       </Section>
     </Container>
