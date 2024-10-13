@@ -2,8 +2,12 @@ import Button from '../Button/Button';
 import formCss from './ContactForm.module.css';
 import { Formik, Form, Field } from 'formik';
 import { IoMdPersonAdd } from 'react-icons/io';
+import { useId } from 'react';
 
 const ContactForm = () => {
+  const nameId = useId();
+  const numId = useId();
+
   return (
     <div className={formCss.formWrapper}>
       <div className={formCss.circles}>
@@ -22,10 +26,10 @@ const ContactForm = () => {
       </div>
       <Formik>
         <Form className={formCss.form}>
-          <label>Name</label>
-          <Field></Field>
-          <label>Number</label>
-          <Field></Field>
+          <label htmlFor={nameId}>Name</label>
+          <Field className={formCss.formInput} id={nameId}></Field>
+          <label htmlFor={numId}>Number</label>
+          <Field className={formCss.formInput} id={numId}></Field>
           <Button>
             <IoMdPersonAdd size="16" />
             Add contact

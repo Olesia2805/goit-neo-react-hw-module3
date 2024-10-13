@@ -18,7 +18,7 @@
 .formWrapper {
   position: relative;
   width: 240px;
-  height: 220px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,7 @@
   transition: 0.5s;
 }
 .circle:nth-child(1) {
-  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  border-radius: 38% 42% 43% 37% / 41% 44% 56% 59%;
   animation: animate 30s linear infinite;
 }
 .circle:nth-child(2) {
@@ -54,6 +54,27 @@
   display: flex;
   flex-direction: column;
   width: 180px;
+}
+
+.formInput {
+  margin-bottom: 7px;
+  border: none;
+  border-radius: 7px;
+  padding: 4px;
+}
+
+.formInput:hover,
+.formInput:focus {
+  outline: none;
+  box-shadow: 0 0 2px var(--gradient-color-second),
+    0 0 3px var(--gradient-color-second), 0 0 4px var(--gradient-color-second),
+    0 0 5px var(--gradient-color-second), 0 0 6px var(--gradient-color-second),
+    0 0 7px var(--gradient-color-second), 0 0 8px var(--gradient-color-second);
+}
+
+.form button {
+  align-self: center;
+  margin-top: 15px;
 }
 
 .formWrapper:hover .circle {
