@@ -7,6 +7,7 @@ import Notification from './components/Notification/Notification';
 import contactDB from './contactsDB.json';
 import { useState } from 'react';
 import appCss from './App.module.css';
+import { nanoid } from 'nanoid';
 
 const App = () => {
   const [contacts, setContacts] = useState(contactDB);
@@ -22,13 +23,20 @@ const App = () => {
     contact.name.toLowerCase().includes(search.toLowerCase())
   );
 
+  const handleSave = newContact => {
+    const contactId = { id: nanoid(), ...newContact };
+    setContacts(prevContact => {
+      return [...prevContact, contactId];
+    });
+  };
+
   return (
     <Container>
       <Section>
         <h1 className={appCss.header}>Phonebook</h1>
       </Section>
       <Section className="form">
-        <ContactForm />
+        <ContactForm save={handleSave} />
       </Section>
       <Section className="searchInput">
         <SearchBox value={search} onSearch={setSearch} />
