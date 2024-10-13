@@ -3,26 +3,19 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { BsPersonFill } from 'react-icons/bs';
 import { MdOutlineDelete } from 'react-icons/md';
 import Button from '../Button/Button';
+import ContactDetail from '../ContactDetail/ContactDetail';
 
 const Contact = ({ contact }) => {
   return (
     <>
-      <>
-        <p className={itemCss.text}>
-          <BsPersonFill size="16" />
-          {contact.name}
-        </p>
-        <p className={itemCss.text}>
-          <FaPhoneAlt size="12" />
-          {contact.number}
-        </p>
-      </>
-      <>
-        <Button>
-          <MdOutlineDelete size="20" />
-          Delete
-        </Button>
-      </>
+      <div className={itemCss.info}>
+        <ContactDetail Icon={BsPersonFill} text={contact.name} />
+        <ContactDetail Icon={FaPhoneAlt} text={contact.number} />
+      </div>
+      <Button>
+        <MdOutlineDelete size="20" />
+        Delete
+      </Button>
     </>
   );
 };
