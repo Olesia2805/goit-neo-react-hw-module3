@@ -1,7 +1,7 @@
 import Section from './components/Section/Section';
 import Container from './components/Container/Container';
 // import ContactForm from './components/ContactForm/ContactForm';
-// import SearchBox from './components/SearchBox/SearchBox';
+import SearchBox from './components/SearchBox/SearchBox';
 import ContactList from './components/ContactList/ContactList';
 import contactDB from './contactsDB.json';
 import { useState } from 'react';
@@ -23,10 +23,10 @@ const App = () => {
       </Section>
       {/* <Section className="form">
         <ContactForm />
-      </Section>
+      </Section> */}
       <Section className="search">
         <SearchBox />
-      </Section> */}
+      </Section>
       <Section>
         <ContactList contactData={contacts} onDelete={deleteContact} />
       </Section>

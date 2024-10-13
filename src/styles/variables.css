@@ -1,14 +1,14 @@
 :root {
-  --background-primary-color: #131313;
-  --content-text-color: #f4f4f4;
+  --background-primary-color: rgb(19, 19, 19);
+  --content-text-color: rgb(244, 244, 244);
   --title-font-family: 'Matemasie', monospace;
   --content-font-family: 'Itim', sans-serif;
-  --gradient-color-first: #4674f3;
-  --gradient-color-second: #9857dd;
-  --gradient-color-third: #ff1361;
-  --gradient-color-fourth: #fff800;
-  --btn-gradient-first: #398dcd;
-  --btn-gradient-second: #005fac;
-  --btn-gradient-third: #7dafd6;
-  --btn-gradient-fourth: #467eac;
+  --gradient-color-first: rgb(70, 116, 243);
+  --gradient-color-second: rgb(152, 87, 221);
+  --gradient-color-third: rgb(255, 19, 97);
+  --gradient-color-fourth: rgb(255, 248, 0);
+  --btn-gradient-first: rgb(57, 141, 205);
+  --btn-gradient-second: rgb(0, 95, 172);
+  --btn-gradient-third: rgb(125, 175, 214);
+  --btn-gradient-fourth: rgb(70, 126, 172);
 }
