@@ -7,16 +7,11 @@
     var(--gradient-color-third) 67%,
     var(--gradient-color-fourth) 100%
   );
-  background-size: auto auto;
-  background-clip: border-box;
   background-size: 300% auto;
   color: #fff;
-  background-clip: text;
-  text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 15s linear infinite;
-  display: inline-block;
   font-size: 32px;
   font-family: var(--title-font-family);
 }
