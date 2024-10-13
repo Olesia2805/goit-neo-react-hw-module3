@@ -1,8 +1,8 @@
 import btnCss from './Button.module.css';
 
-const Button = ({ children }) => {
+const Button = ({ onClick, children }) => {
   return (
-    <button className={btnCss.btn} type="submit">
+    <button className={btnCss.btn} type="submit" onClick={onClick}>
       {children}
     </button>
   );

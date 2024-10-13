@@ -3,11 +3,19 @@ import Container from './components/Container/Container';
 // import ContactForm from './components/ContactForm/ContactForm';
 // import SearchBox from './components/SearchBox/SearchBox';
 import ContactList from './components/ContactList/ContactList';
-import contactData from './contacts.json';
-// import { useState, useEffect } from 'react';
+import contactDB from './contactsDB.json';
+import { useState } from 'react';
 import appCss from './App.module.css';
 
 const App = () => {
+  const [contacts, setContacts] = useState(contactDB);
+
+  const deleteContact = contactID => {
+    setContacts(prevContact => {
+      return prevContact.filter(contact => contact.id !== contactID);
+    });
+  };
+
   return (
     <Container>
       <Section className="header">
@@ -20,7 +28,7 @@ const App = () => {
         <SearchBox />
       </Section> */}
       <Section className="list">
-        <ContactList contactData={contactData} />
+        <ContactList contactData={contacts} onDelete={deleteContact} />
       </Section>
     </Container>
   );

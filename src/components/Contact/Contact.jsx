@@ -5,14 +5,14 @@ import { MdOutlineDelete } from 'react-icons/md';
 import Button from '../Button/Button';
 import ContactDetail from '../ContactDetail/ContactDetail';
 
-const Contact = ({ contact }) => {
+const Contact = ({ contact, onDelete }) => {
   return (
     <>
       <div className={itemCss.info}>
         <ContactDetail Icon={BsPersonFill} text={contact.name} />
         <ContactDetail Icon={FaPhoneAlt} text={contact.number} />
       </div>
-      <Button>
+      <Button onClick={() => onDelete(contact.id)}>
         <MdOutlineDelete size="20" />
         Delete
       </Button>

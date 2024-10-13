@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
   width: 250px;
   border: 1px solid var(--content-text-color);
   box-shadow: 0 0 0.5px var(--gradient-color-second),
@@ -21,4 +20,10 @@
     0 0 3px var(--gradient-color-second), 0 0 4px var(--gradient-color-second),
     0 0 5px var(--gradient-color-second), 0 0 6px var(--gradient-color-second),
     0 0 7px var(--gradient-color-second), 0 0 8px var(--gradient-color-second);
+}
+
+.listCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 15px;
 }
