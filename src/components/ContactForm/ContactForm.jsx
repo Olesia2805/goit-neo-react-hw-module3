@@ -4,16 +4,17 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { IoMdPersonAdd } from 'react-icons/io';
 import { useId } from 'react';
 import * as Yup from 'yup';
+import { useMask } from '@react-input/mask';
 
 const testSchema = Yup.object().shape({
   name: Yup.string()
-    .min(2, 'Too short name!')
-    .max(5, 'Too long name!')
+    .min(3, 'Too short name!')
+    .max(50, 'Too long name!')
     .required('Name is required'),
   number: Yup.string()
-    .matches(/^[0-9]+$/gi, 'Must be a Number')
-    .min(7, 'Number must be 7 digits long')
-    .max(7, 'Number must be 7 digits long')
+    .matches(/^[+\d]?(?:[\d-.()\s]*)$/, 'Must be a valid phone number')
+    .min(9, 'Number must be 7 digits long')
+    .max(9, 'Number must be 7 digits long')
     .required('Phone is required'),
 });
 
@@ -27,6 +28,11 @@ const ContactForm = ({ save }) => {
     save(newContact);
     actions.resetForm();
   };
+
+  const inputRef = useMask({
+    mask: '___-__-__',
+    replacement: { _: /\d/ },
+  });
 
   return (
     <div className={formCss.formWrapper}>
@@ -64,13 +70,18 @@ const ContactForm = ({ save }) => {
           <ErrorMessage name="name" component="p" className={formCss.error} />
 
           <label htmlFor={numId}>Number</label>
-          <Field
-            type="text"
-            className={formCss.formInput}
-            id={numId}
-            name="number"
-            placeholder="777-77-77"
-          ></Field>
+          <Field name="number">
+            {({ field }) => (
+              <input
+                {...field}
+                ref={inputRef}
+                type="text"
+                className={formCss.formInput}
+                id={numId}
+                placeholder="000-00-00"
+              />
+            )}
+          </Field>
           <ErrorMessage name="number" component="p" className={formCss.error} />
           <Button>
             <IoMdPersonAdd size="16" />
