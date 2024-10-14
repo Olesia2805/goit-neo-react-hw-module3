@@ -56,8 +56,11 @@
   width: 180px;
 }
 
+.formLabel {
+  margin-top: 3px;
+}
+
 .formInput {
-  margin-bottom: 7px;
   border: none;
   border-radius: 7px;
   padding: 4px;
@@ -80,4 +83,9 @@
 .formWrapper:hover .circle {
   border: 2px solid var(--clr);
   filter: drop-shadow(0 0 20px var(--clr));
+}
+
+.error {
+  color: var(--gradient-color-third);
+  font-size: 10px;
 }

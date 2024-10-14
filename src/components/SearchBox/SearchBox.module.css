@@ -26,5 +26,5 @@
 .searchBox:not(:placeholder-shown).searchBox:not(:focus) ~ .text {
   top: -0.75rem;
   left: 0.7rem;
-  color: var(--gradient-color-third);
+  color: var(--gradient-color-fourth);
 }

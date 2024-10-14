@@ -59,7 +59,9 @@ const ContactForm = ({ save }) => {
         validationSchema={testSchema}
       >
         <Form className={formCss.form}>
-          <label htmlFor={nameId}>Name</label>
+          <label className={formCss.formLabel} htmlFor={nameId}>
+            Name
+          </label>
           <Field
             type="text"
             className={formCss.formInput}
@@ -69,7 +71,9 @@ const ContactForm = ({ save }) => {
           ></Field>
           <ErrorMessage name="name" component="p" className={formCss.error} />
 
-          <label htmlFor={numId}>Number</label>
+          <label className={formCss.formLabel} htmlFor={numId}>
+            Number
+          </label>
           <Field name="number">
             {({ field }) => (
               <input
